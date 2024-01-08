@@ -103,6 +103,20 @@ body {
   margin-bottom: 20px;
   padding: 5px 0;
   width: 250px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.main-content-article:hover {
+  box-shadow: 0px 4px 4px 2px rgb(100, 100, 100, 0.5);
+}
+
+.main-content-article:hover .article-description {
+  opacity: 75%;
+}
+
+.main-content-article:hover .article-info > i {
+  transform: rotateZ(-90deg);
 }
 
 .article-info {
@@ -128,6 +142,8 @@ body {
   position: absolute;
   right: 20px;
   top: -15px;
+  transition: all 0.2s ease-in-out;
+  z-index: 3;
 }
 
 .article-info > div {
@@ -150,26 +166,50 @@ body {
 }
 
 .article-description {
-  display: none;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  bottom: 50px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  width: 100%;  
+  padding: 10px;
+  opacity: 0;
+  overflow: hidden;
 }
 
 /**
   FOOTER -----------------------------
 */
 
-#footer-mercadoliebre {
-  text-align: center;
+#footer-mercadoliebre {  
   background-color: #EAC926;
   padding: 40px 10px 5px;
 }
 
-#footer-mercadoliebre > section {
-  margin-bottom: 40px;
+.footer-content {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
 }
 
-#footer-mercadoliebre > section > i {
+.footer-content .footer-info > div {
+  margin-bottom: 40px;
+  padding: 0 5px;
+}
+
+.footer-content .footer-info div > i {
   color: #03264C;
   font-size: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-content .footer-info div > i:hover {
+  color: blue;
+  transform: scale(1.1);
 }
 
 .footer-copyright {
@@ -198,8 +238,7 @@ body {
     display: none;
   }
 
-  .main-content-article {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  .main-content-article {    
     width: 45%;
     max-width: 300px;
   }
@@ -214,11 +253,7 @@ body {
   
   .copy-header {
     flex-grow: 1;
-  }
-
-  .article-description {
-    display: block;
-  }
+  }  
 }
 
 @media (min-width: 800px) {
@@ -250,6 +285,16 @@ body {
     width: 100%;
     max-width: 200px;
   }  
+
+  .footer-content {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .footer-info {
+    display: flex;
+  }
 }
 
 @media (min-width: 1200px) {
