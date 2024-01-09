@@ -6,9 +6,9 @@ const app = express();
 const publicPath = path.join(__dirname, `/public`);
 app.use(express.static(publicPath));
 
-const port = 3030;
+const PORT = process.env.PORT || 3001;
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`Servidor corriendo en la direccion http://localhost:${port}`);
 });
 
