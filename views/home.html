@@ -19,10 +19,15 @@
     <div class="main-header-top-bar">
       <img src="images/logo-mercado-liebre.svg" alt="Logo Mercado Liebre" class="main-logo">
 
-      <div class="search-header">
-        <i class="fas fa-search"></i>
-        Buscar productos, marcas
-      </div>
+      <form class="search-header" action="/" method="GET">
+        <div class="search__field">
+          <input type="text" name="search" id="search__product" placeholder="Buscar productos, marcas...">
+        </div>
+
+        <div class="button_content">
+          <button type="submit" class="search__button"><i class="fas fa-search"></i></button>
+        </div>
+      </form>
 
       <h2 class="copy-header">
         <i class="fas fa-hand-holding-usd"></i>
@@ -175,22 +180,22 @@
           <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
             puntos de pago. ¡Y siempre es seguro!</p>
         </div>
-    
+
         <div>
           <i class="fas fa-gift"></i>
           <h4>Envío gratis desde $ 2.500</h4>
           <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
             productos. Es un beneficio de Mercado Puntos.</p>
         </div>
-    
+
         <div>
           <i class="fas fa-user-shield"></i>
           <h4>Seguridad, de principio a fin</h4>
           <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
             porque estás siempre protegid@.</p>
         </div>
-      </section>   
-  
+      </section>
+
       <section class="footer-copyright">
         <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
       </section>

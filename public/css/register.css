@@ -28,7 +28,15 @@
 
 .box__field {
   width: 100%;
-  height: 30px;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.box__field:focus {
+  border: 2px solid #007bff;
+  outline: none;
+  box-shadow: 0 0 5px #007bff;
 }
 
 .category-checkbox > label,
